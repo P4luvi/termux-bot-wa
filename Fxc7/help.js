@@ -1,5 +1,5 @@
 // menu fitur bot
-const help = (prefix, instagram, yt, name, pushname2, user, limitt, uptime, jam, tanggal) => { 
+const help = (prefix, instagram, yt, name, pushname2, user, uptime, jam, tanggal) => { 
 	return `
 	
 \`\`\`Follow My Instagram\`\`\`
@@ -19,7 +19,6 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ┴
 ┣⊱  \`\`\`NAMA USER:\`\`\` *${pushname2}*
 ┣⊱  \`\`\`VERIVICATION:\`\`\` ✅
-┣⊱  \`\`\`LIMIT:\`\`\` *${limitt} perhari*
 ┣⊱  \`\`\`AKTIF:\`\`\` ${kyun(uptime)}
 ┣⊱  \`\`\`JAM:\`\`\` *${jam} WIB*
 ┣⊱  \`\`\`TANGGAL:\`\`\` *${tanggal}*
@@ -40,11 +39,9 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 │➻ *${prefix}owner*
 │➻ *${prefix}speed*
 │➻ *${prefix}daftar*
-│➻ *${prefix}limit*
 │➻ *${prefix}totaluser*
 │➻ *${prefix}blocklist*
 │➻ *${prefix}banlist*
-│➻ *${prefix}premiumlist*
 │➻ *${prefix}bahasa*
 ┬
 ╰────────────────────────
@@ -290,10 +287,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 
 ╭─────────「 *OWNER ONLY* 」
 ┴
-│➻ *${prefix}addprem mentioned*
 │➻ *${prefix}removeprem mention*
-│➻ *${prefix}setmemlimit*
-│➻ *${prefix}setlimit*
 │➻ *${prefix}setreply*
 │➻ *${prefix}setprefix*
 │➻ *${prefix}setnamebot*
@@ -313,7 +307,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰────────────────────────
 
 
-╭────────「 *PREMIUM ONLY* 」
+╭────────「 *MEDIA DOWNLOADER* 」
 ┴
 │➻ *${prefix}playmp3 menepi*
 │➻ *${prefix}fb link video*
@@ -334,6 +328,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 │➲ *KEVIN DAVID*
 │➲ *MY TEAM FXC7 BOT*
 │➲ *CONTENT CREATOR BOT WHATSAPP*
+│➲ *�꙱./P4luvi�꙱
 ┬
 ╰────────────────────────`
 }
@@ -351,11 +346,6 @@ function kyun(seconds){
   return `*${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik*`
 }
 
-// info bot 
-const bottt = (prefix) => {
-return `
-\`\`\`Untuk Sekarang Bot Hanya Bisa Digunakan Di Group Karna\`\`\` *KUOTA MAHAL*\n\n *Mohon Pengertiannya*
-Sekali Lagi Maaf
 
 Jika Bot Ini Ada Di Grup Anda Admin Grup Suruh Aktifkan Bot Dengan Cara ${prefix}bott aktif
 `
@@ -441,17 +431,3 @@ List Bahasa Untuk Command *${prefix}tts*
 `
 }
 exports.bahasa = bahasa
-
-// Limit
-const limitend = (pushname2) => {
-        return`*maaf ${pushname2} limit hari ini habis*\n*limit di reset setiap jam 12:00 WIB TENGAH MALAM*`
-}
-
-const limitcount = (limitCounts) => {
-        return`
-Limit Kamu: ${limitCounts}
-`
-}
-
-exports.limitend = limitend
-exports.limitcount = limitcount
